@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40702343227BD8E20062DE6D /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40702342227BD8E20062DE6D /* IntentHandler.swift */; };
+		40702347227BD8E20062DE6D /* AudioCastKitIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 40702340227BD8E20062DE6D /* AudioCastKitIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4070234B227BDA780062DE6D /* AudioCastKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C9F33522715A270089244C /* AudioCastKit.framework */; };
+		4070234D227BDBCF0062DE6D /* PlayMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070234C227BDBCF0062DE6D /* PlayMediaIntentHandler.swift */; };
+		4070234F227BF9940062DE6D /* ShortcutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070234E227BF9940062DE6D /* ShortcutTableViewController.swift */; };
+		40702351227C1DD40062DE6D /* ShortcutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40702350227C1DD40062DE6D /* ShortcutViewController.swift */; };
 		40AE3E08227AAF6700F1E933 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9F3642272AF670089244C /* Constants.swift */; };
 		40C9F306227007CA0089244C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9F305227007CA0089244C /* AppDelegate.swift */; };
 		40C9F30B227007CA0089244C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C9F309227007CA0089244C /* Main.storyboard */; };
@@ -30,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		40702345227BD8E20062DE6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40C9F2FA227007CA0089244C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4070233F227BD8E20062DE6D;
+			remoteInfo = AudioCastKitIntents;
+		};
 		40C9F33A22715A270089244C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 40C9F2FA227007CA0089244C /* Project object */;
@@ -57,6 +70,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				40702347227BD8E20062DE6D /* AudioCastKitIntents.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +78,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		40408558227FD2D80086B106 /* AudioCastKitIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioCastKitIntents.entitlements; sourceTree = "<group>"; };
+		40702340227BD8E20062DE6D /* AudioCastKitIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AudioCastKitIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		40702342227BD8E20062DE6D /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		40702344227BD8E20062DE6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4070234C227BDBCF0062DE6D /* PlayMediaIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMediaIntentHandler.swift; sourceTree = "<group>"; };
+		4070234E227BF9940062DE6D /* ShortcutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutTableViewController.swift; sourceTree = "<group>"; };
+		40702350227C1DD40062DE6D /* ShortcutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutViewController.swift; sourceTree = "<group>"; };
 		40C9F302227007CA0089244C /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C9F305227007CA0089244C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40C9F30A227007CA0089244C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +111,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4070233D227BD8E20062DE6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4070234B227BDA780062DE6D /* AudioCastKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40C9F2FF227007CA0089244C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,11 +137,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40702341227BD8E20062DE6D /* AudioCastKitIntents */ = {
+			isa = PBXGroup;
+			children = (
+				40408558227FD2D80086B106 /* AudioCastKitIntents.entitlements */,
+				4070234C227BDBCF0062DE6D /* PlayMediaIntentHandler.swift */,
+				40702342227BD8E20062DE6D /* IntentHandler.swift */,
+				40702344227BD8E20062DE6D /* Info.plist */,
+			);
+			path = AudioCastKitIntents;
+			sourceTree = "<group>";
+		};
 		40C9F2F9227007CA0089244C = {
 			isa = PBXGroup;
 			children = (
 				40C9F304227007CA0089244C /* MusicPlayer */,
 				40C9F33622715A270089244C /* AudioCastKit */,
+				40702341227BD8E20062DE6D /* AudioCastKitIntents */,
 				40C9F303227007CA0089244C /* Products */,
 				40C9F35C227161C00089244C /* Frameworks */,
 			);
@@ -123,6 +164,7 @@
 			children = (
 				40C9F302227007CA0089244C /* MusicPlayer.app */,
 				40C9F33522715A270089244C /* AudioCastKit.framework */,
+				40702340227BD8E20062DE6D /* AudioCastKitIntents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +195,8 @@
 			children = (
 				40C9F31A22700E9B0089244C /* PlaylistTableViewController.swift */,
 				40C9F3662272B0DA0089244C /* MusicViewController.swift */,
+				4070234E227BF9940062DE6D /* ShortcutTableViewController.swift */,
+				40702350227C1DD40062DE6D /* ShortcutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,6 +259,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4070233F227BD8E20062DE6D /* AudioCastKitIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40702348227BD8E20062DE6D /* Build configuration list for PBXNativeTarget "AudioCastKitIntents" */;
+			buildPhases = (
+				4070233C227BD8E20062DE6D /* Sources */,
+				4070233D227BD8E20062DE6D /* Frameworks */,
+				4070233E227BD8E20062DE6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioCastKitIntents;
+			productName = AudioCastKitIntents;
+			productReference = 40702340227BD8E20062DE6D /* AudioCastKitIntents.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		40C9F301227007CA0089244C /* MusicPlayer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40C9F314227007CB0089244C /* Build configuration list for PBXNativeTarget "MusicPlayer" */;
@@ -229,6 +290,7 @@
 			);
 			dependencies = (
 				40C9F33B22715A270089244C /* PBXTargetDependency */,
+				40702346227BD8E20062DE6D /* PBXTargetDependency */,
 			);
 			name = MusicPlayer;
 			productName = MusicPlayer;
@@ -263,6 +325,14 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = dengli;
 				TargetAttributes = {
+					4070233F227BD8E20062DE6D = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
 					40C9F301227007CA0089244C = {
 						CreatedOnToolsVersion = 10.2.1;
 						SystemCapabilities = {
@@ -297,11 +367,19 @@
 			targets = (
 				40C9F301227007CA0089244C /* MusicPlayer */,
 				40C9F33422715A270089244C /* AudioCastKit */,
+				4070233F227BD8E20062DE6D /* AudioCastKitIntents */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4070233E227BD8E20062DE6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40C9F300227007CA0089244C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -329,13 +407,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4070233C227BD8E20062DE6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40702343227BD8E20062DE6D /* IntentHandler.swift in Sources */,
+				4070234D227BDBCF0062DE6D /* PlayMediaIntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40C9F2FE227007CA0089244C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40702351227C1DD40062DE6D /* ShortcutViewController.swift in Sources */,
 				40C9F3672272B0DA0089244C /* MusicViewController.swift in Sources */,
 				40C9F306227007CA0089244C /* AppDelegate.swift in Sources */,
 				40C9F31B22700E9B0089244C /* PlaylistTableViewController.swift in Sources */,
+				4070234F227BF9940062DE6D /* ShortcutTableViewController.swift in Sources */,
 				40AE3E08227AAF6700F1E933 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +442,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		40702346227BD8E20062DE6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4070233F227BD8E20062DE6D /* AudioCastKitIntents */;
+			targetProxy = 40702345227BD8E20062DE6D /* PBXContainerItemProxy */;
+		};
 		40C9F33B22715A270089244C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 40C9F33422715A270089244C /* AudioCastKit */;
@@ -380,6 +474,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		40702349227BD8E20062DE6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ND2LGZT6B5;
+				INFOPLIST_FILE = AudioCastKitIntents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dengli.MusicPlayer.AudioCastKitIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4070234A227BD8E20062DE6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ND2LGZT6B5;
+				INFOPLIST_FILE = AudioCastKitIntents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dengli.MusicPlayer.AudioCastKitIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		40C9F312227007CB0089244C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -601,6 +735,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		40702348227BD8E20062DE6D /* Build configuration list for PBXNativeTarget "AudioCastKitIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40702349227BD8E20062DE6D /* Debug */,
+				4070234A227BD8E20062DE6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		40C9F2FD227007CA0089244C /* Build configuration list for PBXProject "MusicPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

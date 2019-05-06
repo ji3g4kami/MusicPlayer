@@ -12,7 +12,7 @@ import IntentsUI
 import os.log
 import AudioCastKit
 
-class MusicViewController: UIViewController {
+class MusicViewController: ShortcutViewController {
     
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var playButton: UIButton!
@@ -20,19 +20,44 @@ class MusicViewController: UIViewController {
     @IBOutlet weak var footerView: UIView!
     
     let audioManager = AudioPlaybackManager.shared
-    var mediaItemContainer: MediaItemContainer = MediaSearchEngine().getPlaylist() // this will soon be replaced
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = mediaItemContainer.title
+        navigationItem.title = userdefaultsKey
         setupCover()
+        addSiriButton()
     }
     
     private func setupCover() {
         guard let songlist = MediaSearchEngine().getPlaylist().playlistMembersip else { return }
-        if let index = songlist.lastIndex(where: { $0.title == mediaItemContainer.title }) {
+        if let index = songlist.lastIndex(where: { $0.title == userdefaultsKey }) {
             coverImage.image = UIImage(named: Planet[index])
         }
+    }
+    
+    private func addSiriButton() {
+        
+        INVoiceShortcutCenter.shared.getAllVoiceShortcuts { [unowned self] (allVoiceShortcuts, error) in
+            if let allVoiceShortcuts = allVoiceShortcuts {
+                if let identifier = UserDefaults.standard.string(forKey: self.mediaItemContainer.title),
+                    let shortcut = allVoiceShortcuts.first(where: { (voiceShortcut) -> Bool in
+                        return voiceShortcut.shortcut.intent?.identifier == identifier
+                    })?.shortcut {
+                    self.siriButton.shortcut = shortcut
+                    self.siriButton.delegate = self
+                } else {
+                    let intent = self.mediaItemContainer.intent
+                    intent.suggestedInvocationPhrase = "Play \(self.mediaItemContainer.title)"
+                    self.siriButton.shortcut = INShortcut(intent: intent)
+                    self.siriButton.delegate = self
+                }
+            }
+        }
+        
+        siriButton.translatesAutoresizingMaskIntoConstraints = false
+        footerView.addSubview(siriButton)
+        footerView.centerXAnchor.constraint(equalTo: siriButton.centerXAnchor).isActive = true
+        footerView.centerYAnchor.constraint(equalTo: siriButton.centerYAnchor).isActive = true
     }
     
     @IBAction func playButtonPressed(_ sender: UIButton) {
@@ -49,5 +74,9 @@ class MusicViewController: UIViewController {
     
     @IBAction func leaveButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    deinit {
+        print("\(String(describing: userdefaultsKey)) is deinited")
     }
 }

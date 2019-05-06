@@ -11,16 +11,59 @@ import Intents
 import IntentsUI
 import AudioCastKit
 
-class PlaylistTableViewController: UITableViewController {
+class PlaylistTableViewController: ShortcutTableViewController {
     
     @IBOutlet var tableFooterView: UIView!
-    let mediaItemContainer: MediaItemContainer = MediaSearchEngine().getPlaylist()
-    
+
     lazy var playlist: [SongItem] = mediaItemContainer.playlistMembersip!
     var nextMediaContainer: MediaItemContainer?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addSiriButton()
+    }
+    
     @IBAction func playAllButtonPresssed(_ sender: UIButton) {
         AudioPlaybackManager.shared.play(mediaItemContainer)
+    }
+    
+    /// - Tag: add_to_siri_button
+    private func addSiriButton() {
+        
+        INVoiceShortcutCenter.shared.getAllVoiceShortcuts { [unowned self] (allVoiceShortcuts, error) in
+            if let allVoiceShortcuts = allVoiceShortcuts {
+                if let identifier = UserDefaults.standard.string(forKey: self.mediaItemContainer.title),
+                    let shortcut = allVoiceShortcuts.first(where: { (voiceShortcut) -> Bool in
+                        return voiceShortcut.shortcut.intent?.identifier == identifier
+                    })?.shortcut {
+                    print(identifier)
+                    self.siriButton.shortcut = shortcut
+                } else {
+                    let intent = self.mediaItemContainer.intent
+                    intent.suggestedInvocationPhrase = "Play all music"
+                    self.siriButton.shortcut = INShortcut(intent: intent)
+                }
+            }
+        }
+        
+        siriButton.delegate = self
+        
+        siriButton.translatesAutoresizingMaskIntoConstraints = false
+        tableFooterView.addSubview(siriButton)
+        tableFooterView.centerXAnchor.constraint(equalTo: siriButton.centerXAnchor).isActive = true
+        tableFooterView.centerYAnchor.constraint(equalTo: siriButton.centerYAnchor).isActive = true
+        
+        tableView.tableFooterView = tableFooterView
+    }
+    
+    override func restoreUserActivityState(_ activity: NSUserActivity) {
+        super.restoreUserActivityState(activity)
+        navigationController?.popToRootViewController(animated: true)
+        if let mediaContainerID = activity.userInfo?[NSUserActivity.MediaItemContainerIDKey] as? String,
+            let container = try? MediaSearchEngine().getSong(from: mediaContainerID) {
+            nextMediaContainer = container
+            performSegue(withIdentifier: "toMusicVC", sender: nil)
+        }
     }
     
     // MARK: - Table view data source
