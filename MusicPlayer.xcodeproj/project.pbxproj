@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40AE3E08227AAF6700F1E933 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9F3642272AF670089244C /* Constants.swift */; };
+		40C9F306227007CA0089244C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9F305227007CA0089244C /* AppDelegate.swift */; };
+		40C9F30B227007CA0089244C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C9F309227007CA0089244C /* Main.storyboard */; };
+		40C9F30D227007CB0089244C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C9F30C227007CB0089244C /* Assets.xcassets */; };
+		40C9F310227007CB0089244C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C9F30E227007CB0089244C /* LaunchScreen.storyboard */; };
+		40C9F31B22700E9B0089244C /* PlaylistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9F31A22700E9B0089244C /* PlaylistTableViewController.swift */; };
+		40C9F33922715A270089244C /* AudioCastKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 40C9F33722715A270089244C /* AudioCastKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40C9F33C22715A270089244C /* AudioCastKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C9F33522715A270089244C /* AudioCastKit.framework */; };
+		40C9F33D22715A270089244C /* AudioCastKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40C9F33522715A270089244C /* AudioCastKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		40C9F34222715B670089244C /* A Girl in Oakland.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40C9F32322700EFD0089244C /* A Girl in Oakland.mp3 */; };
+		40C9F34322715B6C0089244C /* Find My Way Home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40C9F31D22700EFC0089244C /* Find My Way Home.mp3 */; };
+		40C9F34422715B6F0089244C /* Fingers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40C9F31E22700EFC0089244C /* Fingers.mp3 */; };
+		40C9F34522715B720089244C /* In Case You Forgot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40C9F32022700EFD0089244C /* In Case You Forgot.mp3 */; };
+		40C9F34622715B740089244C /* Mighty Fine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40C9F31F22700EFC0089244C /* Mighty Fine.mp3 */; };
+		40C9F34722715B780089244C /* Otis McMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40C9F32122700EFD0089244C /* Otis McMusic.mp3 */; };
+		40C9F34822715BCC0089244C /* Scarlet Fire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 40C9F32222700EFD0089244C /* Scarlet Fire.mp3 */; };
+		40C9F34B22715BFD0089244C /* AudioPlaybackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9F32C22701BBF0089244C /* AudioPlaybackManager.swift */; };
+		40C9F36222729ACB0089244C /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9F36122729ACA0089244C /* MediaItem.swift */; };
+		40C9F3672272B0DA0089244C /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9F3662272B0DA0089244C /* MusicViewController.swift */; };
+		40C9F3692272DE6B0089244C /* MediaSearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9F3682272DE6B0089244C /* MediaSearchEngine.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40C9F33A22715A270089244C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40C9F2FA227007CA0089244C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40C9F33422715A270089244C;
+			remoteInfo = AudioCastKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		40C9F34122715A270089244C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				40C9F33D22715A270089244C /* AudioCastKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40C9F35B227161A10089244C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		40C9F302227007CA0089244C /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40C9F305227007CA0089244C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		40C9F30A227007CA0089244C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40C9F30C227007CB0089244C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40C9F30F227007CB0089244C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40C9F311227007CB0089244C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40C9F31A22700E9B0089244C /* PlaylistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewController.swift; sourceTree = "<group>"; };
+		40C9F31D22700EFC0089244C /* Find My Way Home.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Find My Way Home.mp3"; sourceTree = "<group>"; };
+		40C9F31E22700EFC0089244C /* Fingers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fingers.mp3; sourceTree = "<group>"; };
+		40C9F31F22700EFC0089244C /* Mighty Fine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mighty Fine.mp3"; sourceTree = "<group>"; };
+		40C9F32022700EFD0089244C /* In Case You Forgot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "In Case You Forgot.mp3"; sourceTree = "<group>"; };
+		40C9F32122700EFD0089244C /* Otis McMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Otis McMusic.mp3"; sourceTree = "<group>"; };
+		40C9F32222700EFD0089244C /* Scarlet Fire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Scarlet Fire.mp3"; sourceTree = "<group>"; };
+		40C9F32322700EFD0089244C /* A Girl in Oakland.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A Girl in Oakland.mp3"; sourceTree = "<group>"; };
+		40C9F32C22701BBF0089244C /* AudioPlaybackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlaybackManager.swift; sourceTree = "<group>"; };
+		40C9F33522715A270089244C /* AudioCastKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AudioCastKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40C9F33722715A270089244C /* AudioCastKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioCastKit.h; sourceTree = "<group>"; };
+		40C9F33822715A270089244C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40C9F360227170EB0089244C /* MusicPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MusicPlayer.entitlements; sourceTree = "<group>"; };
+		40C9F36122729ACA0089244C /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
+		40C9F3642272AF670089244C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		40C9F3662272B0DA0089244C /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		40C9F3682272DE6B0089244C /* MediaSearchEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSearchEngine.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40C9F2FF227007CA0089244C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C9F33C22715A270089244C /* AudioCastKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40C9F33222715A270089244C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40C9F2F9227007CA0089244C = {
+			isa = PBXGroup;
+			children = (
+				40C9F304227007CA0089244C /* MusicPlayer */,
+				40C9F33622715A270089244C /* AudioCastKit */,
+				40C9F303227007CA0089244C /* Products */,
+				40C9F35C227161C00089244C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		40C9F303227007CA0089244C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40C9F302227007CA0089244C /* MusicPlayer.app */,
+				40C9F33522715A270089244C /* AudioCastKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40C9F304227007CA0089244C /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				40C9F360227170EB0089244C /* MusicPlayer.entitlements */,
+				40C9F319227008750089244C /* Support */,
+				40C9F3182270086A0089244C /* Controller */,
+				40C9F317227007FD0089244C /* Storyboards */,
+				40C9F30C227007CB0089244C /* Assets.xcassets */,
+			);
+			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		40C9F317227007FD0089244C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				40C9F309227007CA0089244C /* Main.storyboard */,
+				40C9F30E227007CB0089244C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		40C9F3182270086A0089244C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40C9F31A22700E9B0089244C /* PlaylistTableViewController.swift */,
+				40C9F3662272B0DA0089244C /* MusicViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		40C9F319227008750089244C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				40C9F3642272AF670089244C /* Constants.swift */,
+				40C9F305227007CA0089244C /* AppDelegate.swift */,
+				40C9F311227007CB0089244C /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		40C9F31C22700EE00089244C /* Song */ = {
+			isa = PBXGroup;
+			children = (
+				40C9F32322700EFD0089244C /* A Girl in Oakland.mp3 */,
+				40C9F31D22700EFC0089244C /* Find My Way Home.mp3 */,
+				40C9F31E22700EFC0089244C /* Fingers.mp3 */,
+				40C9F32022700EFD0089244C /* In Case You Forgot.mp3 */,
+				40C9F31F22700EFC0089244C /* Mighty Fine.mp3 */,
+				40C9F32122700EFD0089244C /* Otis McMusic.mp3 */,
+				40C9F32222700EFD0089244C /* Scarlet Fire.mp3 */,
+			);
+			path = Song;
+			sourceTree = "<group>";
+		};
+		40C9F33622715A270089244C /* AudioCastKit */ = {
+			isa = PBXGroup;
+			children = (
+				40C9F32C22701BBF0089244C /* AudioPlaybackManager.swift */,
+				40C9F3682272DE6B0089244C /* MediaSearchEngine.swift */,
+				40C9F36122729ACA0089244C /* MediaItem.swift */,
+				40C9F31C22700EE00089244C /* Song */,
+				40C9F33722715A270089244C /* AudioCastKit.h */,
+				40C9F33822715A270089244C /* Info.plist */,
+			);
+			path = AudioCastKit;
+			sourceTree = "<group>";
+		};
+		40C9F35C227161C00089244C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		40C9F33022715A270089244C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C9F33922715A270089244C /* AudioCastKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		40C9F301227007CA0089244C /* MusicPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40C9F314227007CB0089244C /* Build configuration list for PBXNativeTarget "MusicPlayer" */;
+			buildPhases = (
+				40C9F2FE227007CA0089244C /* Sources */,
+				40C9F2FF227007CA0089244C /* Frameworks */,
+				40C9F300227007CA0089244C /* Resources */,
+				40C9F34122715A270089244C /* Embed Frameworks */,
+				40C9F35B227161A10089244C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40C9F33B22715A270089244C /* PBXTargetDependency */,
+			);
+			name = MusicPlayer;
+			productName = MusicPlayer;
+			productReference = 40C9F302227007CA0089244C /* MusicPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		40C9F33422715A270089244C /* AudioCastKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40C9F33E22715A270089244C /* Build configuration list for PBXNativeTarget "AudioCastKit" */;
+			buildPhases = (
+				40C9F33022715A270089244C /* Headers */,
+				40C9F33122715A270089244C /* Sources */,
+				40C9F33222715A270089244C /* Frameworks */,
+				40C9F33322715A270089244C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioCastKit;
+			productName = AudioCastKit;
+			productReference = 40C9F33522715A270089244C /* AudioCastKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40C9F2FA227007CA0089244C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = dengli;
+				TargetAttributes = {
+					40C9F301227007CA0089244C = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
+					};
+					40C9F33422715A270089244C = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 40C9F2FD227007CA0089244C /* Build configuration list for PBXProject "MusicPlayer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40C9F2F9227007CA0089244C;
+			productRefGroup = 40C9F303227007CA0089244C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40C9F301227007CA0089244C /* MusicPlayer */,
+				40C9F33422715A270089244C /* AudioCastKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40C9F300227007CA0089244C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C9F310227007CB0089244C /* LaunchScreen.storyboard in Resources */,
+				40C9F30D227007CB0089244C /* Assets.xcassets in Resources */,
+				40C9F30B227007CA0089244C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40C9F33322715A270089244C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C9F34222715B670089244C /* A Girl in Oakland.mp3 in Resources */,
+				40C9F34522715B720089244C /* In Case You Forgot.mp3 in Resources */,
+				40C9F34822715BCC0089244C /* Scarlet Fire.mp3 in Resources */,
+				40C9F34622715B740089244C /* Mighty Fine.mp3 in Resources */,
+				40C9F34322715B6C0089244C /* Find My Way Home.mp3 in Resources */,
+				40C9F34722715B780089244C /* Otis McMusic.mp3 in Resources */,
+				40C9F34422715B6F0089244C /* Fingers.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40C9F2FE227007CA0089244C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C9F3672272B0DA0089244C /* MusicViewController.swift in Sources */,
+				40C9F306227007CA0089244C /* AppDelegate.swift in Sources */,
+				40C9F31B22700E9B0089244C /* PlaylistTableViewController.swift in Sources */,
+				40AE3E08227AAF6700F1E933 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40C9F33122715A270089244C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C9F34B22715BFD0089244C /* AudioPlaybackManager.swift in Sources */,
+				40C9F3692272DE6B0089244C /* MediaSearchEngine.swift in Sources */,
+				40C9F36222729ACB0089244C /* MediaItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40C9F33B22715A270089244C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40C9F33422715A270089244C /* AudioCastKit */;
+			targetProxy = 40C9F33A22715A270089244C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40C9F309227007CA0089244C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40C9F30A227007CA0089244C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		40C9F30E227007CB0089244C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40C9F30F227007CB0089244C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40C9F312227007CB0089244C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		40C9F313227007CB0089244C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40C9F315227007CB0089244C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MusicPlayer/MusicPlayer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ND2LGZT6B5;
+				INFOPLIST_FILE = MusicPlayer/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dengli.MusicPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		40C9F316227007CB0089244C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MusicPlayer/MusicPlayer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ND2LGZT6B5;
+				INFOPLIST_FILE = MusicPlayer/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dengli.MusicPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		40C9F33F22715A270089244C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ND2LGZT6B5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AudioCastKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dengli.AudioCastKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		40C9F34022715A270089244C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ND2LGZT6B5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AudioCastKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dengli.AudioCastKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40C9F2FD227007CA0089244C /* Build configuration list for PBXProject "MusicPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40C9F312227007CB0089244C /* Debug */,
+				40C9F313227007CB0089244C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40C9F314227007CB0089244C /* Build configuration list for PBXNativeTarget "MusicPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40C9F315227007CB0089244C /* Debug */,
+				40C9F316227007CB0089244C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40C9F33E22715A270089244C /* Build configuration list for PBXNativeTarget "AudioCastKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40C9F33F22715A270089244C /* Debug */,
+				40C9F34022715A270089244C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40C9F2FA227007CA0089244C /* Project object */;
+}
